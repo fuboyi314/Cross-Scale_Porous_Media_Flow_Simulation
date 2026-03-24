@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cross-scale-porous-media-flow-simulation"
+version = "1.4.0"
+description = "Cross-Scale Porous Media Flow Simulation Platform Based on LBM"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PySide6>=6.6",
+  "numpy>=1.24",
+  "Pillow>=10.0",
+  "matplotlib>=3.8"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
